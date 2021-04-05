@@ -25,6 +25,8 @@ examples:
 FIXME: add examples
 """
 
+__version__ = "0.1"
+
 
 class NameLauncher:
     """
@@ -45,6 +47,9 @@ class NameLauncher:
                                        description=__doc__,
                                        epilog=NAME_EXAMPLES)
         args.prog = "name"
+        args.add_argument("-V", "--version",
+                          action="version",
+                          version="%(prog)s {version}".format(version=__version__))
         args.add_argument("-v", "--verbosity",
                           default=0,
                           action="count",
