@@ -7,7 +7,7 @@ import test_base
 
 class TestUtils(test_base.TestBase):
     """Unittest class for utils"""
-    module_name = "utils"
+    MODULE_NAME = "utils"
 
     def test_utils_execute(self):
         """Test utils execute()"""

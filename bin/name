@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-BINPATH=`dirname $0`
-python -B "$BINPATH/../name" $@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+exec python -B ${DIR%/*}/name "$@"
