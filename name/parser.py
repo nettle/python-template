@@ -5,13 +5,20 @@ Name Parser
 import logging
 
 
-class Parser(object):
-    """FIXME"""
+class Parser:
+    """
+    FIXME
+    """
+
     def __init__(self):
-        """FIXME"""
+        """
+        FIXME
+        """
         logging.debug("Parser: init")
 
     def run(self):
-        """FIXME"""
+        """
+        FIXME
+        """
         logging.debug("Parser: running...")
         return True

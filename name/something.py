@@ -5,12 +5,19 @@ Something
 import logging
 
 
-class Something(object):
-    """FIXME"""
+class Something:
+    """
+    FIXME
+    """
+
     def __init__(self):
-        """FIXME"""
+        """
+        FIXME
+        """
         logging.debug("Something: init")
 
     def run(self):
-        """FIXME"""
+        """
+        FIXME
+        """
         logging.debug("Something: running...")

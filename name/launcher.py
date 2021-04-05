@@ -26,7 +26,7 @@ FIXME: add examples
 """
 
 
-class NameLauncher(object):
+class NameLauncher:
     """
     This class is a launcher
     FIXME: add class description

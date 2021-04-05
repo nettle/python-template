@@ -8,13 +8,17 @@ import unittest
 
 
 class TestBase(unittest.TestCase):
-    """Abstract unittest TestBase class"""
+    """
+    Abstract unittest TestBase class
+    """
     MODULE_DIR = "name"   # Change to you dir
     MODULE_NAME = "base"  # IMPORTANT! Redefine MODULE_NAME in your subclass
 
     @classmethod
     def setUpClass(cls):
-        """Load module"""
+        """
+        Load module
+        """
         # NOTE: MODULE_NAME must be defined in subclasses
         cls.module_path = os.path.join(cls.MODULE_DIR, cls.MODULE_NAME + ".py")
         cls.module_path = os.path.abspath(
