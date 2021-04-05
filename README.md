@@ -20,6 +20,20 @@ Folder structure
 | `README.md`         | This file       |
 
 
+Optional files
+--------------
+
+| Folder/File         | Description              |
+| ------------------- | ------------------------ |
+| `name/__init__.py`  | Package marker           |
+| `doc/`              | Documentation            |
+| `LICENSE`           | Lawyering up             |
+| `CHANGELOG.md`      | Version information      |
+| `Makefile`          | Command automation       |
+| `setup.py`          | Package and distribution |
+| `requirements.txt`  | Development dependencies |
+
+
 How to run
 ----------
 
