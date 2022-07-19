@@ -1,23 +1,34 @@
-Name
-====
+Python project template
+=======================
 
-What is this?
-What for?
+This is a very simple Python project template.
+
+Features:
+
+- Shell execution wrapper
+- Ready-to-use Unittest structure
+- Command automation via Makefile (try `make`)
+- Simple test automation (`make test`)
+- Virtual Environment support (`make venv`)
+- Pytest support in Virtual Environment (`make pytest`)
+- Support for executable Python zip archives (`make pyz`)
+- Source Code packaging (`make zip`)
 
 
 Folder structure
 ----------------
 
-| Folder/File         | Description     |
-| ------------------- | --------------- |
-| `bin/name`          | Wrapper         |
-| `src/`              | Implementation  |
-| `src/__main__.py`   | Main            |
-| `src/launcher.py`   | Launcher        |
-| `src/parser.py`     | Parser          |
-| `src/something.py`  | Something       |
-| `test/`             | Unit tests      |
-| `README.md`         | This file       |
+| Folder/File         | Description          |
+| ------------------- | -------------------- |
+| `bin/name`          | Wrapper              |
+| `src/`              | Implementation       |
+| `src/__main__.py`   | Main                 |
+| `src/launcher.py`   | Launcher             |
+| `src/parser.py`     | Parser (example)     |
+| `src/something.py`  | Something (example)  |
+| `test/`             | Unit tests           |
+| `test/test_base`    | Base class for tests |
+| `README.md`         | This file            |
 
 
 Optional files
@@ -53,6 +64,10 @@ Run with verbose output for debugging:
 How to test
 -----------
 
-Run unit tests:
+Run all unit tests:
 
     python -B -m unittest discover -s test -vv
+
+Or just one test, with verbosity:
+
+    python -B test/test_utils.py -vvv

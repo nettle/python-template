@@ -1,6 +1,7 @@
 """
 Unit tests for utils
 """
+import logging
 
 import test_base
 
@@ -15,6 +16,7 @@ class TestUtils(test_base.TestBase):
         """
         Test utils execute()
         """
+        logging.debug("Testing execute()")
         self.assertEqual(self.module.execute("true"), "")
         self.assertEqual(self.module.execute("echo 1"), "1\n")
 
@@ -22,6 +24,7 @@ class TestUtils(test_base.TestBase):
         """
         Test utils available()
         """
+        logging.debug("Testing available()")
         self.assertTrue(self.module.available("true"))
         self.assertFalse(self.module.available("something-wrong"))
 
