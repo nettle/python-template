@@ -18,7 +18,7 @@ def execute(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE):
     try:
         process = subprocess.Popen(cmd, stdout=stdout, stderr=stderr)
         out, _ = process.communicate()
-        return out
+        return out.decode("utf-8", errors="ignore")
     except KeyboardInterrupt:
         logging.error("Interrupted!")
         return ""

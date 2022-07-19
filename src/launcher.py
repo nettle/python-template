@@ -7,6 +7,7 @@ FIXME: add description
 from __future__ import print_function
 import argparse
 import logging
+import platform
 
 import parser
 import something
@@ -83,6 +84,7 @@ class NameLauncher:
         """
         self.parse_args()
         try:
+            logging.debug("Python version: %s", platform.python_version())
             logging.debug("Run...")
             parser.Parser().run()
             something.Something().run()

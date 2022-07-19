@@ -6,7 +6,7 @@ This is a very simple Python project template.
 Features:
 
 - Shell execution wrapper
-- Ready-to-use Unittest structure
+- Ready-to-use unittest structure
 - Command automation via Makefile (try `make`)
 - Simple test automation (`make test`)
 - Virtual Environment support (`make venv`)
@@ -18,17 +18,18 @@ Features:
 Folder structure
 ----------------
 
-| Folder/File         | Description          |
-| ------------------- | -------------------- |
-| `bin/name`          | Wrapper              |
-| `src/`              | Implementation       |
-| `src/__main__.py`   | Main                 |
-| `src/launcher.py`   | Launcher             |
-| `src/parser.py`     | Parser (example)     |
-| `src/something.py`  | Something (example)  |
-| `test/`             | Unit tests           |
-| `test/test_base`    | Base class for tests |
-| `README.md`         | This file            |
+| Folder/File         | Description              |
+| ------------------- | ------------------------ |
+| `bin/name`          | Wrapper                  |
+| `src/`              | Implementation           |
+| `src/__main__.py`   | Main                     |
+| `src/launcher.py`   | Launcher                 |
+| `src/parser.py`     | Parser (example)         |
+| `src/something.py`  | Something (example)      |
+| `test/`             | Unit tests               |
+| `test/test_base.py` | Base class for tests     |
+| `test/tempdir.py`   | Temporary dir for tests  |
+| `README.md`         | This file                |
 
 
 Optional files
@@ -36,10 +37,10 @@ Optional files
 
 | Folder/File         | Description              |
 | ------------------- | ------------------------ |
-| `src/__init__.py`   | Package marker           |
+| `bin/name.bat`      | Wrapper for Windows      |
 | `doc/`              | Documentation            |
 | `LICENSE`           | Lawyering up             |
-| `CHANGELOG.md`      | Version information      |
+| `CHANGELOG.md`      | Release information      |
 | `Makefile`          | Command automation       |
 | `setup.py`          | Package and distribution |
 | `requirements.txt`  | Development dependencies |
@@ -52,13 +53,13 @@ Run via wrapper:
 
     bin/name --help
 
-Add src/bin to `PATH`:
+Add `$(PWD)/bin` to `PATH`:
 
     PATH=$PATH:bin name --help
 
 Run with verbose output for debugging:
 
-    python -B name -vv
+    python -B src -vv
 
 
 How to test
