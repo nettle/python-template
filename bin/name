@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-exec python -B ${DIR%/*}/name "$@"
+if [ -n "$(which python3 2>/dev/null)" ]; then
+    PYTHON=python3
+elif [ -n "$(which python 2>/dev/null)" ]; then
+    # Warning! Using obsoleted Python version
+    PYTHON=python
+else
+    echo "Sorry, this tool requires python3 or python"
+    exit 1
+fi
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# SRC_DIR=${THIS_DIR%/*}/src
+# export PYTHONPATH=${SRC_DIR}
+$PYTHON -B ${THIS_DIR%/*}/name "$@"
