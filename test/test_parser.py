@@ -9,7 +9,7 @@ class TestParser(test_base.TestBase):
     """
     Unittest class for parser module
     """
-    MODULE_NAME = "parser"
+    MODULE_FILE_NAME = "src/parser.py"
 
     def test_parser_run(self):
         """
@@ -17,3 +17,7 @@ class TestParser(test_base.TestBase):
         """
         parser = self.module.Parser()
         self.assertEqual(parser.run(), True)
+
+
+if __name__ == "__main__":
+    test_base.main()

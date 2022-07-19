@@ -9,7 +9,7 @@ class TestUtils(test_base.TestBase):
     """
     Unittest class for utils
     """
-    MODULE_NAME = "utils"
+    MODULE_FILE_NAME = "src/utils.py"
 
     def test_utils_execute(self):
         """
@@ -24,3 +24,7 @@ class TestUtils(test_base.TestBase):
         """
         self.assertTrue(self.module.available("true"))
         self.assertFalse(self.module.available("something-wrong"))
+
+
+if __name__ == "__main__":
+    test_base.main()
