@@ -11,7 +11,11 @@ import logging
 import parser
 import something
 
-NAME_EXAMPLES = """
+
+PROGNAME = "name"
+VERSION = "0.0"
+DESCRIPTION = "Name {}".format(VERSION)
+EXAMPLES = """
 examples:
 
   # "Dry run" to see commands without execution:
@@ -24,8 +28,6 @@ examples:
 
 FIXME: add examples
 """
-
-__version__ = "0.1"
 
 
 class NameLauncher:
@@ -43,13 +45,14 @@ class NameLauncher:
         """
         Parse command line arguments or show help.
         """
-        args = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter,
-                                       description=__doc__,
-                                       epilog=NAME_EXAMPLES)
-        args.prog = "name"
+        args = argparse.ArgumentParser(
+            formatter_class=argparse.RawTextHelpFormatter,
+            description=DESCRIPTION,
+            prog=PROGNAME,
+            epilog=EXAMPLES)
         args.add_argument("-V", "--version",
                           action="version",
-                          version="%(prog)s {version}".format(version=__version__))
+                          version="%(prog)s {version}".format(version=VERSION))
         args.add_argument("-v", "--verbosity",
                           default=0,
                           action="count",
