@@ -11,7 +11,7 @@ class TestBase(unittest.TestCase):
     """
     Abstract unittest TestBase class
     """
-    MODULE_DIR = "name"   # Change to you dir
+    MODULE_DIR = "src"    # Change to you dir
     MODULE_NAME = "base"  # IMPORTANT! Redefine MODULE_NAME in your subclass
 
     @classmethod

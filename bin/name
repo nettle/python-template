@@ -11,6 +11,6 @@ else
 fi
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-# SRC_DIR=${THIS_DIR%/*}/src
+SRC_DIR=${THIS_DIR%/*}/src
 # export PYTHONPATH=${SRC_DIR}
-$PYTHON -B ${THIS_DIR%/*}/name "$@"
+$PYTHON -B ${SRC_DIR} "$@"

@@ -11,11 +11,11 @@ Folder structure
 | Folder/File         | Description     |
 | ------------------- | --------------- |
 | `bin/name`          | Wrapper         |
-| `name/`             | Implementation  |
-| `name/__main__.py`  | Main            |
-| `name/launcher.py`  | Launcher        |
-| `name/parser.py`    | Parser          |
-| `name/something.py` | Something       |
+| `src/`              | Implementation  |
+| `src/__main__.py`   | Main            |
+| `src/launcher.py`   | Launcher        |
+| `src/parser.py`     | Parser          |
+| `src/something.py`  | Something       |
 | `test/`             | Unit tests      |
 | `README.md`         | This file       |
 
@@ -25,7 +25,7 @@ Optional files
 
 | Folder/File         | Description              |
 | ------------------- | ------------------------ |
-| `name/__init__.py`  | Package marker           |
+| `src/__init__.py`   | Package marker           |
 | `doc/`              | Documentation            |
 | `LICENSE`           | Lawyering up             |
 | `CHANGELOG.md`      | Version information      |
@@ -41,7 +41,7 @@ Run via wrapper:
 
     bin/name --help
 
-Add name/bin to `PATH`:
+Add src/bin to `PATH`:
 
     PATH=$PATH:bin name --help
 
