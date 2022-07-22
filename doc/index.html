@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <style>
+        .page-content .code-mask, .page-content pre {
+            overflow: hidden;
+        }
+        .page-content thead th {
+            font-size: 100%;
+            font-weight: 600;
+        }
+        .Wrap {
+            max-width: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="docute"></div>
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script>
+        new Docute({
+            target: "#docute",
+            title: "Documentation",
+            // theme: "dark",
+            // darkThemeToggler: true,
+            // layout: "left",  //wide narrow left
+            highlight: ["bash", "shell-session", "python"],
+
+            nav: [
+                // {
+                //     title: "Home",
+                //     link: "/"
+                // },
+                {
+                    title: "GitHub",
+                    link: "https://github.com/....."
+                },
+                // // A dropdown menu
+                // {
+                //     title: "Community",
+                //     children: [
+                //         {
+                //             title: "Spectrum",
+                //             link: "https://spectrum.chat/your-community"
+                //         },
+                //         {
+                //             title: "Discord",
+                //             link: "https://discord.app/your-discord-server"
+                //         }
+                //     ]
+                // },
+            ],
+
+            sidebar: [
+                // A sidebar item, with child links
+                {
+                    title: "Introduction",
+                    link: "README.md"
+                },
+                {
+                    title: "Page 1",
+                    children: [
+                        {
+                            title: "Child 1",
+                            link: "page1.md#child1"
+                        },
+                        {
+                            title: "Child 2",
+                            link: "page1.md#child1"
+                        },
+                    ]
+                },
+                {
+                    title: "Page 2",
+                    link: "page2.md"
+                },
+
+                // // An external link
+                // {
+                //     title: "GitHub",
+                //     link: "https://github.com/egoist/docute"
+                // },
+            ]
+        });
+    </script>
+</body>
+</html>
